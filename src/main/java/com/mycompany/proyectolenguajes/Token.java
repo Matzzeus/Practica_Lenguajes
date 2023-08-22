@@ -8,14 +8,14 @@ package com.mycompany.proyectolenguajes;
  *
  * @author matzeus
  */
-public class Tokens {
+public class Token {
     String lexema;
     int fila;
     int columna;
     int posicion;
     TipoToken tipo;
     
-    public Tokens(String lexema,int fila,int columna,int posicion,TipoToken tipo){
+    public Token(String lexema,int fila,int columna,int posicion,TipoToken tipo){
         this.lexema=lexema;
         this.fila=fila;
         this.columna=columna;

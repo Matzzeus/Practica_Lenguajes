@@ -11,7 +11,8 @@ package com.mycompany.proyectolenguajes;
 public enum TipoToken {
     ID("Identificador"),ARITMETICO("Aritmético"), COMPARACION ("Comparación"), 
     LOGICOS ("Lógicos"), ASIGANACION ("Asignacion"), PALABRAS_CLAVE ("Plabra Clava"),
-    CONSTANTES ("Constantes"), COMENTARIO ("Comentario"), OTROS ("Otros"),   ;
+    CONSTANTES ("Constantes"), COMENTARIO ("Comentario"), OTROS ("Otros"), DECIMAL ("constantes"), ENTERO ("constentes"), CADENA ("constantes"),
+    BOOLEANAS ("constantes"), ERROR("error");
     private String tipo;
     private TipoToken(String tipo){
         this.tipo=tipo;

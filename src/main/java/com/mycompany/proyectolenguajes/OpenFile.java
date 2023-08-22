@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
@@ -18,7 +19,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class OpenFile {
     
-     static void openFile(){
+     static void openFile(JTextPane panel_texto ){
         JFileChooser upload = new JFileChooser();
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("txt","txt");
         upload.setFileFilter(filtro);
@@ -35,7 +36,8 @@ public class OpenFile {
             while((line = br.readLine()) != null){                
                 text += line + "\n";
             }            
-            System.out.println("text");
+            //System.out.println(text);
+            panel_texto.setText(text);
         }
         catch (Exception ex){
             JOptionPane.showMessageDialog(null, "Error al cargar el archivo");     
